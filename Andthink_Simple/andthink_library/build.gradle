@@ -24,4 +24,5 @@ dependencies {
     compile 'com.jakewharton:butterknife:5.1.1'
     compile 'com.loopj.android:android-async-http:1.4.6'
     compile files('libs/fastjson-1.1.28.jar')
+    compile files('libs/BmobSDK_V3.4.3_0820.jar')
 }

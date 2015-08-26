@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="theme_color">#333435</color>
+    <!--分割线颜色-->
+    <color name="divider_color">#EAEAEA</color>
+    <!--白色-->
+    <color name="white">#ffffff</color>
+    <!--所有的字体颜色-->
+    <color name="text_color">#6a6a6a</color>
+    <!--背景色-->
+    <color name="background">#f3f3f3</color>
+    <!--标题文字颜色-->
+    <color name="text_title_color">#242424</color>
+    <!--浅色文字颜色-->
+    <color name="text_light_color">#a6a6a6</color>
+    <!--传说中的辅助色，请告诉我啥是ADC色-->
+    <color name="red">#d73139</color>
+
+</resources>
