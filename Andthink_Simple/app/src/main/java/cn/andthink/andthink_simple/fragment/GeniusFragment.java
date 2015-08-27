@@ -8,9 +8,9 @@ import cn.andthink.andthink_simple.R;
 import fragment.BaseFragment;
 
 /**
- * Created by thekey123 on 2015/8/25.
+ * Created by thekey123 on 2015/8/27.
  */
-public class HomeFragment extends BaseFragment {
+public class GeniusFragment extends BaseFragment {
 
     @Override
     protected void setAttribute() {
@@ -29,6 +29,7 @@ public class HomeFragment extends BaseFragment {
 
     @Override
     protected View initView(LayoutInflater inflater, ViewGroup container) {
-        return inflater.inflate(R.layout.fragment_home, container, false);
+        return inflater.inflate(R.layout.fragment_personal, container, false);
     }
+
 }

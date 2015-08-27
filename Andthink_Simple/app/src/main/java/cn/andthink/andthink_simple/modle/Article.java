@@ -20,8 +20,17 @@ public class Article extends BmobObject {
     //图片
     private String image;
     //是否通过审核
-    private Boolean ispass;
+    private Boolean isPass;
+    //是否是推荐的文章
+    private Boolean isNice;
 
+    public Boolean getIsNice() {
+        return isNice;
+    }
+
+    public void setIsNice(Boolean isNice) {
+        this.isNice = isNice;
+    }
 
     public String getTitle() {
         return title;
@@ -48,10 +57,10 @@ public class Article extends BmobObject {
     }
 
     public Boolean getIspass() {
-        return ispass;
+        return isPass;
     }
 
     public void setIspass(Boolean ispass) {
-        this.ispass = ispass;
+        this.isPass = ispass;
     }
 }

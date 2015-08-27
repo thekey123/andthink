@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/background">
+
+    <TextView
+        android:id="@+id/tv_type"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        android:text="疯子·psycho"
+        android:textColor="@color/text_light_color"
+        android:textSize="13sp"
+        android:typeface="serif" />
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_type"
+        android:layout_marginBottom="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="13dp"
+        android:ellipsize="end"
+        android:text="小学生作文你都用过哪些经典段子"
+        android:textColor="@color/text_title_color"
+        android:textSize="18sp" />
+
+    <ImageView
+        android:id="@+id/image"
+        android:layout_width="match_parent"
+        android:layout_height="160dp"
+        android:layout_below="@+id/tv_title"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:scaleType="fitXY"
+        android:src="@mipmap/a" />
+
+    <TextView
+        android:id="@+id/tv_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/image"
+        android:layout_margin="20dp"
+        android:lineSpacingExtra="2dp"
+        android:text="小明睡在妈妈睡的大床旁边的小床上,每天夜里小明的妈妈都会从被窝里伸出手拉住小明的手,小明才能睡着.有一天,有人发现小明全家都死了.小明的爸爸被砍成了肉泥,小明的妈妈也死了,小明也死了。小明手里抱着一个血淋淋的胳膊。" />
+
+    <ImageView
+        android:id="@+id/iv_like"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_content"
+        android:layout_toLeftOf="@+id/tv_like_num"
+        android:src="@mipmap/like" />
+
+    <TextView
+        android:id="@+id/tv_like_num"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/tv_content"
+        android:layout_marginBottom="20dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="20dp"
+        android:text="12"
+        android:textColor="@color/text_light_color"
+        android:textSize="15sp" />
+
+</RelativeLayout>

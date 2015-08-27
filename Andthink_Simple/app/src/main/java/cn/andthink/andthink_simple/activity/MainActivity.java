@@ -1,5 +1,6 @@
 package cn.andthink.andthink_simple.activity;
 
+import android.os.Bundle;
 import android.support.v4.app.FragmentTransaction;
 import android.view.KeyEvent;
 import android.view.View;
@@ -9,12 +10,13 @@ import android.widget.LinearLayout;
 import android.widget.Toast;
 
 import activity.BaseActivity;
+import bmob.BmobHelper;
 import butterknife.InjectView;
 import cn.andthink.andthink_simple.R;
-import cn.andthink.andthink_simple.fragment.HomeFragment;
+import cn.andthink.andthink_simple.fragment.CrazyFragment;
 import cn.andthink.andthink_simple.fragment.MessageFragment;
 import cn.andthink.andthink_simple.fragment.PersonalFragment;
-import cn.andthink.andthink_simple.fragment.TypeFragment;
+import cn.andthink.andthink_simple.fragment.GeniusFragment;
 
 public class MainActivity extends BaseActivity implements View.OnClickListener {
 
@@ -34,12 +36,19 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
     @InjectView(R.id.center)
     FrameLayout center;
 
-    private HomeFragment homeFragment;
-    private TypeFragment typeFragment;
+    private CrazyFragment crazyFragment;
+    private GeniusFragment geniusFragment;
     private MessageFragment messageFragment;
     private PersonalFragment personalFragment;
 
     private final static int HOME = 0, TYPE = 1, MESSAGE = 2, PERSONAL = 3;
+
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        BmobHelper.initBmob(this,"341bfa236730f0546c8e6f201905771d");
+    }
 
     @Override
     protected void initLayoutAndView() {
@@ -68,19 +77,19 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
         FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
         switch (index) {
             case HOME:
-                if (homeFragment == null) {
-                    homeFragment = new HomeFragment();
-                    transaction.add(R.id.center, homeFragment);
+                if (crazyFragment == null) {
+                    crazyFragment = new CrazyFragment();
+                    transaction.add(R.id.center, crazyFragment);
                 } else {
-                    transaction.show(homeFragment);
+                    transaction.show(crazyFragment);
                 }
                 break;
             case TYPE:
-                if (typeFragment == null) {
-                    typeFragment = new TypeFragment();
-                    transaction.add(R.id.center, typeFragment);
+                if (geniusFragment == null) {
+                    geniusFragment = new GeniusFragment();
+                    transaction.add(R.id.center, geniusFragment);
                 } else {
-                    transaction.show(typeFragment);
+                    transaction.show(geniusFragment);
                 }
                 break;
 
@@ -128,10 +137,10 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
      */
     private void hideAllFragments() {
         FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
-        if (homeFragment != null)
-            transaction.hide(homeFragment);
-        if (typeFragment != null)
-            transaction.hide(typeFragment);
+        if (crazyFragment != null)
+            transaction.hide(crazyFragment);
+        if (geniusFragment != null)
+            transaction.hide(geniusFragment);
         if (messageFragment != null)
             transaction.hide(messageFragment);
         if (personalFragment != null)
